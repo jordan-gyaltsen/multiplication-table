@@ -1,8 +1,10 @@
-
 /*
-style the table,headers,and data 
-for a uniform, readable design.
+Copyright Jordan Gyaltsen 2022 
+jordangyaltsen@student.uml.edu
 */
+
+/* style the table,headers,and data 
+for a uniform, readable design. */
 table, th, td {
 text-align: center;
   padding: 8px;
