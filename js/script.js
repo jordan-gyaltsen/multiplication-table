@@ -1,3 +1,7 @@
+/*
+Copyright Jordan Gyaltsen 2022 
+jordangyaltsen@student.uml.edu
+*/
 function newFunction() {
     // store the integer values of inputted entries into variables
     const colmin = parseInt(document.getElementById("colmin").value);
