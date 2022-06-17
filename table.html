@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- links to external files-->
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- required tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiplication Table</title>    
+</head>
+
+<body>
+    <section class="title">
+        <h1>Multiplication table</h1>
+        <p>By Jordan Gyaltsen</p>
+    </section>
+    <!-- section contains form -->
+      <section class="container" id="container">
+        
+        <!-- inspiration for the use of prevent default and execution of js function upon form submission:
+            https://stackoverflow.com/questions/19454310/stop-form-refreshing-page-on-submit 
+            there were dozens of things I found on prevent default and settled on my current code after trial and error.
+            https://stackoverflow.com/a/8250714/5775769  lead me to reading more on w3 schools as below
+            https://www.w3schools.com/tags/ev_onsubmit.asp -->
+
+        <!-- preventDefault stops page from resetting on submission and newFunction is used from script  -->
+        <form id="myform" onsubmit="event.preventDefault(); newFunction();">
+            <div>
+                <!-- min and max attributes require entries be in range -->
+                <!-- required attribute prevents no input case -->
+                <!-- min > max case is dealt with in .js portion -->
+                <!-- these apply for every input in this form -->
+                <label for="colmin">Minimum Column value (between -50 and 50):</label>
+                <input type="number" id="colmin" name="colmin" min="-50" max="50" required>
+            </div>
+
+            <div>
+                <label for="colmax">Maximum Column Value (between -50 and 50):</label>
+                <input type="number" id="colmax" name="colmax" min="-50" max="50" required>
+            </div>
+            <div>
+                <label for="rowmin">Minimum Row Value (between -50 and 50):</label>
+                <input type="number" id="rowmin" name="rowmin" min="-50" max="50" required>
+            </div>
+            <div>
+                <label for="rowmax">Maximum Row Value (between -50 and 50):</label>
+                <input type="number" id="rowmax" name="rowmax" min="-50" max="50" required>
+            </div>
+            <div>
+                <input id="btn" class="button" type="submit" value="Submit">
+            </div>
+        </form>
+
+        <!-- blank element used when error message needs to be shown. -->
+        <div id="errmsg"></div>
+    </section>
+
+    <section class="result"><table id='mytable'></table></section>
+    
+
+</body>
+</html>
